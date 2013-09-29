@@ -1,0 +1,11 @@
+create_user.erb
+<br>
+<br>
+
+<form action="/user/:id" method="POST">
+  <label for="create_email">Email</label><input type="text" name="user[email]" id="create_email">
+  <label for="create_password">Password</label><input type="password" name="user[password]" id="create_password">
+  <label for="nickname">Nickname</label><input type="text" name="user[nickname]" id="nickname">
+  <label for="location">Location</label><input type="text" name="user[location]" id="location">
+  <input type="submit" value="Submit">
+</form>

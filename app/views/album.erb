@@ -1,0 +1,23 @@
+Album.erb
+<br>
+<br>
+
+<% if @user.nickname %>
+  <p><%= @user.nickname %>'s photo albums:</p>
+<% else %>
+  <p><%= @user.email %>'s photo albums:</p>
+<% end %>
+
+
+<div class="album_listing">
+  <ul>
+    <% @albums.each do |album| %>
+      <li><a href="/albums/<%= album.id %>"><%= album.album_name %></a></li>
+    <% end %>
+  </ul>
+</div>
+<p>Create new album...</p>
+<form action="/albums/create" method="post">
+  <label for="album_name"><input id="album_name" type="text"name="album_name"></label>
+  <input type="submit" value="Submit">
+</form>

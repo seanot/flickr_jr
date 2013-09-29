@@ -1,0 +1,15 @@
+upload_album.erb
+<br>
+<br>
+
+<%= @user.nickname %>
+<br>
+<%= @album.album_name %>
+<br>
+
+
+
+<form action="/albums/<%= @album.id %>" method="POST" enctype="multipart/form-data">
+  <p><input type="file" name="image" /></p>
+  <input type="submit" value="Upload!">
+</form>
